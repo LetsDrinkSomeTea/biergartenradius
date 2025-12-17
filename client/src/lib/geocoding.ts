@@ -9,7 +9,7 @@ export async function geocodeAddress(
 
   try {
     const response = await fetch(
-      `/api/geocode?q=${encodeURIComponent(address)}`,
+      `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(address)}&limit=1`,
       {
         signal: controller.signal,
       }

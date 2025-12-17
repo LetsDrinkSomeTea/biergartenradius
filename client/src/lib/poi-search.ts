@@ -48,12 +48,12 @@ export async function searchPOIs(
   try {
     const query = buildOverpassQuery(center, radius, categories);
     
-    const response = await fetch('/api/pois', {
+    const response = await fetch('https://overpass-api.de/api/interpreter', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json',
+        'Content-Type': 'application/x-www-form-urlencoded',
       },
-      body: JSON.stringify({ query }),
+      body: `data=${encodeURIComponent(query)}`,
       signal: controller.signal,
     });
 
