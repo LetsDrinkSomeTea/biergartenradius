@@ -247,7 +247,7 @@ export default function Home() {
       <div className="flex-1 flex overflow-hidden">
         <aside
           className={`
-            w-full lg:w-[360px] flex-shrink-0 border-r bg-background overflow-y-auto
+            w-full lg:w-[420px] flex-shrink-0 border-r bg-background overflow-y-auto
             absolute lg:relative inset-0 top-14 z-50 lg:z-auto
             transition-transform duration-300
             ${sidebarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
